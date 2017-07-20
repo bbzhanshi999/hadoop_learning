@@ -1,4 +1,4 @@
-package com.zql.chapter2;
+package com.zql.chapter1;
 
 import org.apache.hadoop.io.IntWritable;
 import org.apache.hadoop.io.Text;

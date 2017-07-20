@@ -1,4 +1,4 @@
-package com.zql.chapter2;
+package com.zql.chapter1;
 
 import org.apache.hadoop.fs.Path;
 import org.apache.hadoop.io.IntWritable;
@@ -7,7 +7,6 @@ import org.apache.hadoop.mapreduce.Job;
 import org.apache.hadoop.mapreduce.lib.input.FileInputFormat;
 import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
 
-import java.io.IOException;
 
 /**
  * hadoop job入口
@@ -26,7 +25,9 @@ public class MaxTemperature {
         job.setJobName("MaxTemperature");
         FileInputFormat.addInputPath(job,new Path(args[0]));
         FileOutputFormat.setOutputPath(job,new Path(args[1]));
+
         job.setMapperClass(MaxTemperatureMapper.class);
+        job.setCombinerClass(MaxTemperatureReducer.class);//设置combiner，在数据传给reducer之前，先做一次汇聚
         job.setReducerClass(MaxTemperatureReducer.class);
 
         job.setOutputKeyClass(Text.class);
