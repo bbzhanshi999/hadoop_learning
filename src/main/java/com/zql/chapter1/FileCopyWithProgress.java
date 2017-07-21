@@ -1,5 +1,6 @@
 package com.zql.chapter1;
 
+import com.sun.scenario.effect.impl.sw.sse.SSEBlend_SRC_OUTPeer;
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.FSDataOutputStream;
 import org.apache.hadoop.fs.FileSystem;
@@ -9,6 +10,7 @@ import org.apache.hadoop.util.Progressable;
 
 import java.io.BufferedInputStream;
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.URI;
 
@@ -25,7 +27,7 @@ public class FileCopyWithProgress {
         Configuration conf = new Configuration();
         FileSystem fs = FileSystem.get(URI.create(uri),conf);
         FSDataOutputStream out = fs.create(new Path(uri), new Progressable() {
-            @Override
+
             public void progress() {
                 System.out.println('.');
             }
