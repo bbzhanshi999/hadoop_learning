@@ -10,6 +10,7 @@ import java.io.IOException;
 import java.net.URI;
 
 /**
+ * 使用FSDataInputStream可以进行查找，并且重复拷贝
  * Created by Administrator on 2017/7/19.
  */
 public class FileSystemDoubleCat {
