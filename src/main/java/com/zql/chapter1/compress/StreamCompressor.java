@@ -1,4 +1,4 @@
-package com.zql.chapter1;
+package com.zql.chapter1.compress;
 
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.io.IOUtils;

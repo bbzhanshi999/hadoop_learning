@@ -1,4 +1,4 @@
-package com.zql.chapter1;
+package com.zql.chapter1.hdfs;
 
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.FSDataOutputStream;

@@ -1,4 +1,4 @@
-package com.zql.chapter1;
+package com.zql.chapter1.temperature;
 
 import org.apache.hadoop.io.IntWritable;
 import org.apache.hadoop.io.LongWritable;

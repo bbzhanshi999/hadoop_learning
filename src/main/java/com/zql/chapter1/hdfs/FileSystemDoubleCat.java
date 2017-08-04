@@ -1,34 +1,38 @@
-package com.zql.chapter1;
+package com.zql.chapter1.hdfs;
 
 import org.apache.hadoop.conf.Configuration;
+import org.apache.hadoop.fs.FSDataInputStream;
 import org.apache.hadoop.fs.FileSystem;
 import org.apache.hadoop.fs.Path;
 import org.apache.hadoop.io.IOUtils;
 
 import java.io.IOException;
-import java.io.InputStream;
 import java.net.URI;
 
 /**
+ * 使用FSDataInputStream可以进行查找，并且重复拷贝
  * Created by Administrator on 2017/7/19.
  */
-public class FileSystemCat {
+public class FileSystemDoubleCat {
 
 
     public static void main(String[] args) throws IOException {
-
         String uri = args[0];
         Configuration conf = new Configuration();
-        FileSystem fs = FileSystem.get(URI.create(uri), conf);
+        FileSystem fileSystem = FileSystem.get(URI.create(uri), conf);
+        FSDataInputStream in = null;
 
-        InputStream in = null;
         try {
-            in = fs.open(new Path(uri));
+            in = fileSystem.open(new Path(uri));
             IOUtils.copyBytes(in,System.out,4096,false);
-        } catch (Exception e) {
+            in.seek(10);
+            IOUtils.copyBytes(in,System.out,4096,false);
+        } catch (IOException e) {
             e.printStackTrace();
         } finally {
             IOUtils.closeStream(in);
         }
+
+
     }
 }

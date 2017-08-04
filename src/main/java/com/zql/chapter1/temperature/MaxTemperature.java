@@ -1,4 +1,4 @@
-package com.zql.chapter1;
+package com.zql.chapter1.temperature;
 
 import org.apache.hadoop.fs.Path;
 import org.apache.hadoop.io.IntWritable;
