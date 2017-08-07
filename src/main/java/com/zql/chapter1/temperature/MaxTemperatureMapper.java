@@ -24,7 +24,7 @@ public class MaxTemperatureMapper extends Mapper<LongWritable,Text,Text,IntWrita
         }
         String quailty =line.substring(92,93);
         if(airTemperature!=9999&&quailty.matches("[01459]"))
-            context.write(new Text(year),new IntWritable(airTemperature));
+            context.write(new Text(year),new IntWritable( ));
 
     }
 }
