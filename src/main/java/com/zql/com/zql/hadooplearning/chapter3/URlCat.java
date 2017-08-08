@@ -1,4 +1,4 @@
-package com.zql.chapter1.hdfs;
+package com.zql.com.zql.hadooplearning.chapter3;
 
 import org.apache.hadoop.fs.FsUrlStreamHandlerFactory;
 import org.apache.hadoop.io.IOUtils;

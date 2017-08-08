@@ -1,4 +1,4 @@
-package com.zql.chapter1.sequencefile;
+package com.zql.com.zql.hadooplearning.chapter5.sequencefile;
 
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.FileSystem;
@@ -29,7 +29,7 @@ public class SequenceFileReadDemo {
         long position = reader.getPosition();
         while (reader.next(key,value)){
             String syncSeen = reader.syncSeen()?"*":"";
-            System.out.printf("[%s%s]\t%s\t%s\n\", position, syncSeen, key, value");
+            System.out.printf("[%s%s]\t%s\t%s\n", position, syncSeen, key, value);
             position = reader.getPosition();
         }
         IOUtils.closeStream(reader);

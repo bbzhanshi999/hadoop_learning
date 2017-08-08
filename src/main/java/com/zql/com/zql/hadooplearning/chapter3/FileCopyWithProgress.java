@@ -1,4 +1,4 @@
-package com.zql.chapter1.hdfs;
+package com.zql.com.zql.hadooplearning.chapter3;
 
 import com.sun.scenario.effect.impl.sw.sse.SSEBlend_SRC_OUTPeer;
 import org.apache.hadoop.conf.Configuration;
