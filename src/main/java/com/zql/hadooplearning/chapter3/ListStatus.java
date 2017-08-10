@@ -1,4 +1,4 @@
-package com.zql.com.zql.hadooplearning.chapter3;
+package com.zql.hadooplearning.chapter3;
 
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.FileStatus;

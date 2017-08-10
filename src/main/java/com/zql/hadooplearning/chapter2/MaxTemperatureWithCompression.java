@@ -1,4 +1,4 @@
-package com.zql.com.zql.hadooplearning.chapter2;
+package com.zql.hadooplearning.chapter2;
 
 import org.apache.hadoop.fs.Path;
 import org.apache.hadoop.io.IntWritable;

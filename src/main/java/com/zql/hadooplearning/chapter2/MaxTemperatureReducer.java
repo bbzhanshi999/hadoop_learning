@@ -1,4 +1,4 @@
-package com.zql.com.zql.hadooplearning.chapter2;
+package com.zql.hadooplearning.chapter2;
 
 import org.apache.hadoop.io.IntWritable;
 import org.apache.hadoop.io.Text;
@@ -20,4 +20,5 @@ public class MaxTemperatureReducer extends Reducer<Text,IntWritable,Text, IntWri
         }
         context.write(key,new IntWritable(max));
     }
+
 }

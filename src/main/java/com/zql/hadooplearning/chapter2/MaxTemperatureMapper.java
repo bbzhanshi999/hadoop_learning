@@ -1,4 +1,4 @@
-package com.zql.com.zql.hadooplearning.chapter2;
+package com.zql.hadooplearning.chapter2;
 
 import org.apache.hadoop.io.IntWritable;
 import org.apache.hadoop.io.LongWritable;
@@ -24,7 +24,7 @@ public class MaxTemperatureMapper extends Mapper<LongWritable,Text,Text,IntWrita
         }
         String quailty =line.substring(92,93);
         if(airTemperature!=9999&&quailty.matches("[01459]"))
-            context.write(new Text(year),new IntWritable( ));
+            context.write(new Text(year),new IntWritable(airTemperature));
 
     }
 }

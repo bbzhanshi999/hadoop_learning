@@ -1,4 +1,4 @@
-package com.zql.com.zql.hadooplearning.chapter5.sequencefile;
+package com.zql.hadooplearning.chapter5.sequencefile;
 
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.FileSystem;

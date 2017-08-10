@@ -1,6 +1,5 @@
-package com.zql.com.zql.hadooplearning.chapter3;
+package com.zql.hadooplearning.chapter3;
 
-import com.sun.scenario.effect.impl.sw.sse.SSEBlend_SRC_OUTPeer;
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.FSDataOutputStream;
 import org.apache.hadoop.fs.FileSystem;
@@ -10,7 +9,6 @@ import org.apache.hadoop.util.Progressable;
 
 import java.io.BufferedInputStream;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.URI;
 
